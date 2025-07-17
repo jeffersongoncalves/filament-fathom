@@ -20,6 +20,8 @@ You can install the package via composer:
 composer require jeffersongoncalves/filament-fathom
 ```
 
+This package depends on [jeffersongoncalves/laravel-fathom](https://github.com/jeffersongoncalves/laravel-fathom) which will be automatically installed as a dependency.
+
 ## Usage
 
 Publish config file.
