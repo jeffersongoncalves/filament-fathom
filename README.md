@@ -1,13 +1,13 @@
 <div class="filament-hidden">
 
-![Filament Fathom](https://raw.githubusercontent.com/jeffersongoncalves/filament-fathom/master/art/jeffersongoncalves-filament-fathom.png)
+![Filament Fathom](https://raw.githubusercontent.com/jeffersongoncalves/filament-fathom/3.x/art/jeffersongoncalves-filament-fathom.png)
 
 </div>
 
 # Filament Fathom
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/filament-fathom.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-fathom)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-fathom/fix-php-code-style-issues.yml?branch=master&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-fathom/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amaster)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-fathom/fix-php-code-style-issues.yml?branch=3.x&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-fathom/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3A3.x)
 [![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/filament-fathom.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-fathom)
 
 This Filament package seamlessly integrates Fathom analytics into your Filament admin panels. It automatically injects the Fathom tracking script into all Filament panels, allowing you to track admin user engagement and panel usage directly within your Laravel application. This package simplifies the integration process by automatically handling the script injection, saving you time and effort. With minimal configuration, you can leverage Fathom's powerful analytics features to gain valuable insights into your admin panel usage.
