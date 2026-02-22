@@ -12,7 +12,9 @@ class FathomServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        $package->name('filament-fathom');
+        $package
+            ->name('filament-fathom')
+            ->hasTranslations();
     }
 
     public function packageRegistered(): void
