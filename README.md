@@ -10,39 +10,75 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-fathom/fix-php-code-style-issues.yml?branch=3.x&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-fathom/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3A3.x)
 [![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/filament-fathom.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-fathom)
 
-This Filament package seamlessly integrates Fathom analytics into your Filament admin panels. It automatically injects the Fathom tracking script into all Filament panels, allowing you to track admin user engagement and panel usage directly within your Laravel application. This package simplifies the integration process by automatically handling the script injection, saving you time and effort. With minimal configuration, you can leverage Fathom's powerful analytics features to gain valuable insights into your admin panel usage.
+Filament plugin for [Fathom Analytics](https://usefathom.com/) with a built-in settings page. Automatically injects the Fathom tracking script into all Filament panels and provides a settings page to manage tracking configuration directly from the admin panel.
+
+## Version Compatibility
+
+| Branch | Filament | PHP | Laravel |
+|--------|----------|-----|---------|
+| 1.x | 3.x | ^8.2 | ^11.0 |
+| 2.x | 4.x | ^8.2 | ^11.0 |
+| 3.x | 5.x | ^8.2 | ^11.0 |
 
 ## Requirements
 
 - PHP 8.2 or higher
 - Laravel 11.0 or higher
-- Filament 5.0
+- Filament 5.x
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require jeffersongoncalves/filament-fathom
+composer require jeffersongoncalves/filament-fathom:"^3.0"
 ```
 
-This package depends on [jeffersongoncalves/laravel-fathom](https://github.com/jeffersongoncalves/laravel-fathom) which will be automatically installed as a dependency.
-
-The service provider will be automatically discovered and registered by Laravel. No additional setup is required.
-
-## Usage
-
-This package automatically integrates with your Filament admin panels. Once installed and configured, the Fathom tracking script will be automatically injected into all Filament panel pages.
-
-1. Publish the Fathom configuration file:
+Publish and run the spatie/laravel-settings migrations:
 
 ```bash
-php artisan vendor:publish --tag=fathom-config
+php artisan vendor:publish --provider="Spatie\LaravelSettings\LaravelSettingsServiceProvider" --tag="migrations"
 ```
 
-2. Configure your Fathom site ID in the published configuration file or set the `FATHOM_SITE_ID` environment variable.
+Publish and run the Fathom settings migrations:
 
-That's it! The package will automatically inject the Fathom analytics script into your Filament admin panels. No manual template modifications are required.
+```bash
+php artisan vendor:publish --tag=fathom-settings-migrations
+php artisan migrate
+```
+
+Register the plugin in your Filament PanelProvider:
+
+```php
+use JeffersonGoncalves\Filament\Fathom\FathomPlugin;
+
+public function panel(Panel $panel): Panel
+{
+    return $panel
+        // ...
+        ->plugins([
+            FathomPlugin::make(),
+        ]);
+}
+```
+
+## Settings Page
+
+The plugin provides a settings page where you can configure:
+
+- **Website ID** - Your Fathom site ID (e.g. ABCDEFGH)
+- **Canonical URL** - Use canonical URL instead of actual URL for tracking
+- **Auto Tracking** - Automatically track page views on page load
+- **SPA Mode** - Single Page Application tracking mode (auto, history, hash)
+- **Honor Do Not Track** - Respect the browser Do Not Track setting
+
+### Disabling the Settings Page
+
+If you only want the automatic script injection without the settings page:
+
+```php
+FathomPlugin::make()->settingsPage(false)
+```
 
 ## Testing
 
@@ -64,7 +100,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Jèfferson Gonçalves](https://github.com/jeffersongoncalves)
+- [Jefferson Gonçalves](https://github.com/jeffersongoncalves)
 - [All Contributors](../../contributors)
 
 ## License
