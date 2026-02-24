@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.1.1 - 2026-02-24
+
+### What's Changed
+
+- Add Laravel 13.x support (orchestra/testbench ^11.0)
+
 ## v3.1.0 - 2026-02-22
 
 **Full Changelog**: https://github.com/jeffersongoncalves/filament-fathom/compare/3.0.0...v3.1.0
