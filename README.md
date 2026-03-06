@@ -9,6 +9,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/filament-fathom.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-fathom)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-fathom/fix-php-code-style-issues.yml?branch=1.x&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-fathom/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3A1.x)
 [![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/filament-fathom.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-fathom)
+[![License](https://img.shields.io/packagist/l/jeffersongoncalves/filament-fathom.svg?style=flat-square)](LICENSE.md)
 
 Filament plugin for [Fathom Analytics](https://usefathom.com/) with a built-in settings page. Automatically injects the Fathom tracking script into all Filament panels and provides a settings page to manage tracking configuration directly from the admin panel.
 
