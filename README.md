@@ -1,6 +1,6 @@
 <div class="filament-hidden">
 
-![Filament Fathom](https://raw.githubusercontent.com/jeffersongoncalves/filament-fathom/2.x/art/jeffersongoncalves-filament-fathom.png)
+![Filament Fathom](https://raw.githubusercontent.com/jeffersongoncalves/filament-fathom/2.x/art/jeffersongoncalves-filament-fathom.jpg)
 
 </div>
 
