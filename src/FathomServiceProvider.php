@@ -2,23 +2,20 @@
 
 namespace JeffersonGoncalves\Filament\Fathom;
 
-use Filament\Support\Facades\FilamentView;
 use Filament\View\PanelsRenderHook;
-use Illuminate\Contracts\View\View;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
+use JeffersonGoncalves\FilamentAnalyticsCore\AbstractAnalyticsServiceProvider;
 
-class FathomServiceProvider extends PackageServiceProvider
+class FathomServiceProvider extends AbstractAnalyticsServiceProvider
 {
-    public function configurePackage(Package $package): void
+    protected function packageName(): string
     {
-        $package
-            ->name('filament-fathom')
-            ->hasTranslations();
+        return 'filament-fathom';
     }
 
-    public function packageRegistered(): void
+    protected function renderHooks(): array
     {
-        FilamentView::registerRenderHook(PanelsRenderHook::HEAD_START, fn (): View => view('fathom::script'));
+        return [
+            PanelsRenderHook::HEAD_START => 'fathom::script',
+        ];
     }
 }
