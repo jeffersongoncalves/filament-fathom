@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.3.1 - 2026-09-23
+
+### Fixed
+
+- **Dependencies:** this branch now requires the matching `jeffersongoncalves/filament-analytics-core` major. It previously required `^3.0` (Filament 5), so Composer resolved an incompatible Filament version and the settings page broke.
+
+### What's Changed
+
+* fix(deps): require matching filament-analytics-core major (2.x) by @jeffersongoncalves in https://github.com/jeffersongoncalves/filament-fathom/pull/37
+
+**Full Changelog**: https://github.com/jeffersongoncalves/filament-fathom/compare/2.3.0...2.3.1
+
 ## 2.3.0 - 2026-09-23
 
 ### What's new
