@@ -30,7 +30,7 @@ updates:
     ignore:
       - dependency-name: jeffersongoncalves/filament-analytics-core
         versions:
-          - '>=4.0'
+          - '>=2.0'
     groups:
       composer-deps:
         patterns:
@@ -60,7 +60,7 @@ updates:
     ignore:
       - dependency-name: jeffersongoncalves/filament-analytics-core
         versions:
-          - '>=4.0'
+          - '>=3.0'
     groups:
       composer-deps:
         patterns:
