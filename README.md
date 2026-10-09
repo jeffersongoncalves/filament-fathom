@@ -23,6 +23,15 @@ Filament plugin for [Fathom Analytics](https://usefathom.com/) with a built-in s
 | 2.x | 4.x | ^8.2 | ^11.0 |
 | 3.x | 5.x | ^8.2 | ^11.0 |
 
+### Navigation group
+
+Put the settings page in one of your panel's own navigation groups (a string or a closure):
+
+```php
+FathomPlugin::make()
+    ->navigationGroup(fn (): string => __('admin.navigation.settings')),
+```
+
 ## Requirements
 
 - PHP 8.2 or higher

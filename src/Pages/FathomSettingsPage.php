@@ -9,6 +9,7 @@ use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Pages\SettingsPage;
 use JeffersonGoncalves\Fathom\Settings\FathomSettings;
+use JeffersonGoncalves\FilamentAnalyticsCore\AbstractAnalyticsPlugin;
 
 class FathomSettingsPage extends SettingsPage
 {
@@ -18,7 +19,7 @@ class FathomSettingsPage extends SettingsPage
 
     public static function getNavigationGroup(): ?string
     {
-        return __('filament-fathom::fathom.navigation_group');
+        return AbstractAnalyticsPlugin::navigationGroupFor('filament-fathom') ?? __('filament-fathom::fathom.navigation_group');
     }
 
     public static function getNavigationLabel(): string
